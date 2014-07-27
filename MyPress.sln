@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPress.Web", "MyPress.Web\MyPress.Web.csproj", "{3015A8A7-81D4-4D1B-8245-FBFF4959C8DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPress.Client", "MyPress.Client\MyPress.Client.csproj", "{97C62578-05C2-4269-96B4-F67255488674}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3015A8A7-81D4-4D1B-8245-FBFF4959C8DC} = {3015A8A7-81D4-4D1B-8245-FBFF4959C8DC}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3015A8A7-81D4-4D1B-8245-FBFF4959C8DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3015A8A7-81D4-4D1B-8245-FBFF4959C8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3015A8A7-81D4-4D1B-8245-FBFF4959C8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3015A8A7-81D4-4D1B-8245-FBFF4959C8DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C62578-05C2-4269-96B4-F67255488674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C62578-05C2-4269-96B4-F67255488674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C62578-05C2-4269-96B4-F67255488674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C62578-05C2-4269-96B4-F67255488674}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

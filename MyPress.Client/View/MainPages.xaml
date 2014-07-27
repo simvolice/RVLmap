@@ -1,0 +1,25 @@
+﻿<navigation:Page 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:ctrls="clr-namespace:MyPress.Client.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="MyPress.Client.View.MainPages"
+           mc:Ignorable="d"
+           d:DesignWidth="640" d:DesignHeight="480"
+           Title="MainPages Page" DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
+
+
+
+    <navigation:Page.Resources>
+
+        <ctrls:MapControl x:Key="mapControl"/>
+
+    </navigation:Page.Resources>
+
+    <Viewbox Stretch="Uniform">
+        <ctrls:MapControl/>
+
+    </Viewbox>
+</navigation:Page>
