@@ -46,6 +46,5 @@
                 </Canvas>
            
         </Border>
-        <Image x:Name="img" HorizontalAlignment="Left" Height="34" Margin="42,65,0,0" VerticalAlignment="Top" Width="33" Source="/MyPress.Client;component/Images/gmap-tool-tip.png"/>
     </Grid>
 </UserControl>

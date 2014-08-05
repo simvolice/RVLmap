@@ -156,6 +156,9 @@
     <Compile Include="View\MapControl.xaml.cs">
       <DependentUpon>MapControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SplashScreen.xaml.cs">
+      <DependentUpon>SplashScreen.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -178,9 +181,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\SplashScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\gmap-tool-tip.png" />
+    <Content Include="Images\kazakhstanHigh.svg" />
+    <Resource Include="Images\ccc.png" />
     <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <Content Include="clientaccesspolicy.xml" />

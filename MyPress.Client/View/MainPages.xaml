@@ -18,8 +18,17 @@
 
     </navigation:Page.Resources>
 
-    <Viewbox Stretch="Uniform">
-        <ctrls:MapControl/>
 
-    </Viewbox>
+    <Grid>
+        <Viewbox Stretch="Uniform">
+            <Viewbox.Projection>
+                <PlaneProjection RotationX="-65"/>
+            </Viewbox.Projection>
+            <ctrls:MapControl/>
+
+        </Viewbox>
+        <Grid Height="20" VerticalAlignment="Bottom" Background="#FFCCFDFF"/>
+
+
+    </Grid>
 </navigation:Page>
