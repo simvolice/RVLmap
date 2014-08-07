@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
                     xmlns:system="clr-namespace:System;assembly=mscorlib"
-                    xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions">
+                    xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing">
 	<Style x:Key="ProgressBarUp" TargetType="ProgressBar">
 		<Setter Property="Foreground" Value="#FF027DB8"/>
 		<Setter Property="Background" Value="#FFD2D5D8"/>
@@ -54,9 +54,23 @@
 								<Rectangle x:Name="IndeterminateGradientFill" Margin="{TemplateBinding BorderThickness}" Opacity="0.7" RadiusY="2" RadiusX="2" StrokeThickness="1"/>
 							</Grid>
 							<Grid x:Name="DeterminateRoot" Margin="1">
-								<Rectangle x:Name="ProgressBarIndicator" HorizontalAlignment="Left" Margin="{TemplateBinding BorderThickness}" RadiusY="1.5" RadiusX="1.5" StrokeThickness="0.5" Fill="#FFFF2BE6"/>
+								<Rectangle x:Name="ProgressBarIndicator" HorizontalAlignment="Left" Margin="{TemplateBinding BorderThickness}" RadiusY="1.5" RadiusX="1.5" StrokeThickness="0.5" Fill="#FFE6E24D"/>
 							</Grid>
 						</Grid>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+    
+	<Style x:Key="CalloutStyle1" TargetType="ed:Callout">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="ed:Callout">
+					<Grid>
+						<Path x:Name="PART_Path" Fill="{TemplateBinding Fill}" HorizontalAlignment="Stretch" StrokeStartLineCap="{TemplateBinding StrokeStartLineCap}" StrokeDashOffset="{TemplateBinding StrokeDashOffset}" Stretch="Fill" StrokeEndLineCap="{TemplateBinding StrokeEndLineCap}" StrokeDashCap="{TemplateBinding StrokeDashCap}" Stroke="{TemplateBinding Stroke}" StrokeThickness="{TemplateBinding StrokeThickness}" StrokeMiterLimit="{TemplateBinding StrokeMiterLimit}" StrokeLineJoin="{TemplateBinding StrokeLineJoin}" StrokeDashArray="{TemplateBinding StrokeDashArray}" UseLayoutRounding="False" VerticalAlignment="Stretch"/>
+						<ContentPresenter Content="{TemplateBinding InternalContent}" HorizontalAlignment="Center" Margin="{TemplateBinding Padding}" VerticalAlignment="Center"/>
 					</Grid>
 				</ControlTemplate>
 			</Setter.Value>
