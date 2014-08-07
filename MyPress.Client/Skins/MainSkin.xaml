@@ -3,6 +3,65 @@
                     xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
                     xmlns:system="clr-namespace:System;assembly=mscorlib"
                     xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions">
+	<Style x:Key="ProgressBarUp" TargetType="ProgressBar">
+		<Setter Property="Foreground" Value="#FF027DB8"/>
+		<Setter Property="Background" Value="#FFD2D5D8"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Maximum" Value="100"/>
+		<Setter Property="IsTabStop" Value="False"/>
+		<Setter Property="BorderBrush">
+			<Setter.Value>
+				<LinearGradientBrush EndPoint=".5,1" StartPoint=".5,0">
+					<GradientStop Color="#FFAEB7BF" Offset="0"/>
+					<GradientStop Color="#FF919EA7" Offset="0.35"/>
+					<GradientStop Color="#FF7A8A99" Offset="0.35"/>
+					<GradientStop Color="#FF647480" Offset="1"/>
+				</LinearGradientBrush>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="ProgressBar">
+					<Grid x:Name="Root">
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualState x:Name="Determinate"/>
+								<VisualState x:Name="Indeterminate">
+									<Storyboard RepeatBehavior="Forever">
+										<ObjectAnimationUsingKeyFrames Duration="00:00:00" Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="IndeterminateRoot">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Duration="00:00:00" Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="DeterminateRoot">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Collapsed</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<Border x:Name="ProgressBarTrack" CornerRadius="3"/>
+						<Grid x:Name="ProgressBarRootGrid">
+							<Rectangle x:Name="ProgressBarRootGradient" Margin="{TemplateBinding BorderThickness}" RadiusY="1.5" RadiusX="1.5" StrokeThickness="1" Canvas.ZIndex="1"/>
+							<Grid x:Name="IndeterminateRoot" Visibility="Collapsed">
+								<Rectangle x:Name="IndeterminateSolidFill" Margin="{TemplateBinding BorderThickness}" Opacity="1" RadiusY="2" RadiusX="2" RenderTransformOrigin="0.5,0.5" StrokeThickness="0"/>
+								<Rectangle x:Name="IndeterminateGradientFill" Margin="{TemplateBinding BorderThickness}" Opacity="0.7" RadiusY="2" RadiusX="2" StrokeThickness="1"/>
+							</Grid>
+							<Grid x:Name="DeterminateRoot" Margin="1">
+								<Rectangle x:Name="ProgressBarIndicator" HorizontalAlignment="Left" Margin="{TemplateBinding BorderThickness}" RadiusY="1.5" RadiusX="1.5" StrokeThickness="0.5" Fill="#FFFF2BE6"/>
+							</Grid>
+						</Grid>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
 
     
 </ResourceDictionary>
