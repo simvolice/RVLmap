@@ -1,4 +1,5 @@
 using System;
+using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
@@ -9,12 +10,17 @@ using MyPress.Client.View;
 
 namespace MyPress.Client.ViewModel
 {
-    
+
+
+
     public class MainViewModel : ViewModelBase
 
     {
 
        
+
+
+
 
         private readonly IDataService _dataService;
 
@@ -39,10 +45,18 @@ namespace MyPress.Client.ViewModel
                 
 
 
-
+        
 
 
                 });
+
+
+        
+        
+        
+        
+        
+        
         }
 
      
@@ -50,33 +64,10 @@ namespace MyPress.Client.ViewModel
         
 
 
+       
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        
-        
-        
-        
         
         ////public override void Cleanup()
         ////{
