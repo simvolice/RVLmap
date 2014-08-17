@@ -7,7 +7,7 @@
            xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
            xmlns:view="clr-namespace:MyPress.Client.View"
            xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
-           xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" xmlns:chart="clr-namespace:De.TorstenMandelkow.MetroChart;assembly=De.TorstenMandelkow.MetroChart"
+           xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" 
            xmlns:System="clr-namespace:System;assembly=mscorlib"
            x:Class="MyPress.Client.View.SplashScreen" 
            mc:Ignorable="d"
@@ -22,13 +22,13 @@
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="grid">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <ElasticEase EasingMode="EaseIn" Springiness="10"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
+                		<BackEase EasingMode="EaseIn"/>
+                	</EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-46">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <ElasticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
+                		<BackEase EasingMode="EaseInOut"/>
+                	</EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
@@ -54,7 +54,7 @@
     <Grid x:Name="LayoutRoot" Background="#FF393E41">
 
 
-        <Grid x:Name="grid" Margin="11,79,9,10" Background="#FF8A8C8D">
+        <Grid x:Name="grid" Margin="11,79,9,10" Background="#FF8A8C8D" HorizontalAlignment="Center" VerticalAlignment="Center">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseLeftButtonDown">
                     <ei:ControlStoryboardAction Storyboard="{StaticResource MapInNormal}"/>

@@ -6,10 +6,7 @@
 
 
 
-    <Style x:Key="MinimalChartStyle" TargetType="chart:ChartBase">
-        <Setter Property="Width" Value="500"/>
-        <Setter Property="Height" Value="500"/>
-    </Style>
+   
 
 
     <Style x:Key="ProgressBarUp" TargetType="ProgressBar">
@@ -80,6 +77,44 @@
 					<Grid>
 						<Path x:Name="PART_Path" Fill="{TemplateBinding Fill}" HorizontalAlignment="Stretch" StrokeStartLineCap="{TemplateBinding StrokeStartLineCap}" StrokeDashOffset="{TemplateBinding StrokeDashOffset}" Stretch="Fill" StrokeEndLineCap="{TemplateBinding StrokeEndLineCap}" StrokeDashCap="{TemplateBinding StrokeDashCap}" Stroke="{TemplateBinding Stroke}" StrokeThickness="{TemplateBinding StrokeThickness}" StrokeMiterLimit="{TemplateBinding StrokeMiterLimit}" StrokeLineJoin="{TemplateBinding StrokeLineJoin}" StrokeDashArray="{TemplateBinding StrokeDashArray}" UseLayoutRounding="False" VerticalAlignment="Stretch"/>
 						<ContentPresenter Content="{TemplateBinding InternalContent}" HorizontalAlignment="Center" Margin="{TemplateBinding Padding}" VerticalAlignment="Center"/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="TitleMap" TargetType="TextBlock">
+		<Setter Property="Foreground" Value="#FFBF4E4E"/>
+	</Style>
+	<Style x:Key="TitleMapTrue" TargetType="sdk:Label">
+		<Setter Property="IsTabStop" Value="False"/>
+		<Setter Property="HorizontalContentAlignment" Value="Left"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="sdk:Label">
+					<Grid>
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualState x:Name="Normal"/>
+								<VisualState x:Name="Disabled"/>
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="ValidationStates">
+								<VisualState x:Name="Valid"/>
+								<VisualState x:Name="Invalid"/>
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="RequiredStates">
+								<VisualState x:Name="NotRequired"/>
+								<VisualState x:Name="Required">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="FontWeight" Storyboard.TargetName="ContentControl">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="SemiBold"/>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<Path Data="M19.6917,28.913 L25,25 L61.9863,24.837" HorizontalAlignment="Left" Height="8.25" Margin="16.5,19.75,0,0" Stretch="Fill" Stroke="#FF444444" StrokeThickness="2" UseLayoutRounding="False" VerticalAlignment="Top" Width="49.5"/>
+						<Ellipse HorizontalAlignment="Left" Height="8" Stroke="#FF444444" StrokeThickness="2" VerticalAlignment="Top" Width="8" Margin="12,25,0,0" Fill="#FFE6E24D"/>
+						<ContentControl x:Name="ContentControl" Cursor="{TemplateBinding Cursor}" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" IsTabStop="False" VerticalAlignment="{TemplateBinding VerticalAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Margin="23,7,-43,20" Foreground="#FF444444" Height="13" Width="88"/>
 					</Grid>
 				</ControlTemplate>
 			</Setter.Value>

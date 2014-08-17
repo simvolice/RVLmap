@@ -59,9 +59,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="De.TorstenMandelkow.MetroChart">
-      <HintPath>D:\SourceAndTestApplications\MetroChart\De.TorstenMandelkow.MetroChart.SL\Bin\Debug\De.TorstenMandelkow.MetroChart.dll</HintPath>
-    </Reference>
     <Reference Include="GalaSoft.MvvmLight.Extras.SL5">
       <HintPath>..\packages\MvvmLightLibs.4.2.30.0\lib\SL5\GalaSoft.MvvmLight.Extras.SL5.dll</HintPath>
     </Reference>
@@ -152,17 +149,59 @@
     </Compile>
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\AKT.xaml.cs">
+      <DependentUpon>AKT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ALM.xaml.cs">
+      <DependentUpon>ALM.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Astana.xaml.cs">
+      <DependentUpon>Astana.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ATY.xaml.cs">
+      <DependentUpon>ATY.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\JAM.xaml.cs">
+      <DependentUpon>JAM.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KAR.xaml.cs">
+      <DependentUpon>KAR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KOS.xaml.cs">
+      <DependentUpon>KOS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KYZ.xaml.cs">
+      <DependentUpon>KYZ.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainPages.xaml.cs">
       <DependentUpon>MainPages.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainUserControl.xaml.cs">
       <DependentUpon>MainUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\MAN.xaml.cs">
+      <DependentUpon>MAN.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MapControl.xaml.cs">
       <DependentUpon>MapControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\PAV.xaml.cs">
+      <DependentUpon>PAV.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SKO.xaml.cs">
+      <DependentUpon>SKO.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SplashScreen.xaml.cs">
       <DependentUpon>SplashScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\VKO.xaml.cs">
+      <DependentUpon>VKO.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\YKO.xaml.cs">
+      <DependentUpon>YKO.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZKO.xaml.cs">
+      <DependentUpon>ZKO.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +213,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\AKT.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ALM.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Astana.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ATY.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\JAM.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KAR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KOS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KYZ.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainPages.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -182,11 +253,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\MAN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MapControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\PAV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SKO.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\SplashScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VKO.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\YKO.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ZKO.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
