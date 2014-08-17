@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3015A8A7-81D4-4D1B-8245-FBFF4959C8DC}</ProjectGuid>
+    <ProjectGuid>{27DDEAF3-2C9C-41CC-AC54-801DE5BB7821}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyPress.Web</RootNamespace>
-    <AssemblyName>MyPress.Web</AssemblyName>
+    <RootNamespace>RVLMap.Web</RootNamespace>
+    <AssemblyName>RVLMap.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -30,9 +30,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
-    <PublishDatabases>false</PublishDatabases>
-    <IncludeIisSettings>true</IncludeIisSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -47,38 +44,13 @@
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Data.Edm, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.Data.Edm.5.0.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Data.OData, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.Data.OData.5.0.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Data.Services, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.Data.Services.5.0.0\lib\net40\Microsoft.Data.Services.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Data.Services.Client, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.Data.Services.Client.5.0.0\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
-    </Reference>
     <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Data.Services.Client" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.DomainServices.EntityFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
     <Reference Include="System.ServiceModel.DomainServices.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.ServiceModel.DomainServices.Server, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.ServiceModel.Web" />
-    <Reference Include="System.Spatial, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\System.Spatial.5.0.0\lib\net40\System.Spatial.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -88,9 +60,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmLightLibs.4.4.32.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -100,38 +69,33 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\From1C.mdf" />
-    <Content Include="App_Data\From1C_log.ldf">
-      <DependentUpon>From1C.mdf</DependentUpon>
-    </Content>
-    <Content Include="clientaccesspolicy.xml" />
     <Content Include="ClientBin\MyPress.Client.xap" />
     <Content Include="MyPress.ClientTestPage.aspx" />
     <Content Include="MyPress.ClientTestPage.html" />
+    <Content Include="Service1.svc" />
     <Content Include="Silverlight.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data.cs" />
-    <Compile Include="DataPersistance.cs" />
-    <Compile Include="ErrorList.cs" />
-    <Compile Include="From1CDomainService.cs" />
-    <Compile Include="From1CDomainService.metadata.cs" />
-    <Compile Include="ModelFrom1C.Designer.cs">
+    <Compile Include="IService1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service1.svc.cs">
+      <DependentUpon>Service1.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Vetlab.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelFrom1C.edmx</DependentUpon>
+      <DependentUpon>Vetlab.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
-    <EntityDeploy Include="ModelFrom1C.edmx">
+    <EntityDeploy Include="Vetlab.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelFrom1C.Designer.cs</LastGenOutput>
+      <LastGenOutput>Vetlab.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="ModelFrom1C.edmx.diagram">
-      <DependentUpon>ModelFrom1C.edmx</DependentUpon>
+    <Content Include="packages.config" />
+    <Content Include="Vetlab.edmx.diagram">
+      <DependentUpon>Vetlab.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -156,9 +120,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1316</DevelopmentServerPort>
+          <DevelopmentServerPort>40649</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1311</IISUrl>
+          <IISUrl>http://localhost:40647/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

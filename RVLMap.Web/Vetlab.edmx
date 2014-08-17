@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище base_vetlabModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="Хранилище base_vetlabModelContainer">
+          <EntitySet Name="_AccumRg871" EntityType="Хранилище base_vetlabModel._AccumRg871" store:Type="Tables" store:Schema="dbo" store:Name="_AccumRg871">
+            <DefiningQuery>SELECT 
+      [_AccumRg871].[_Period] AS [_Period], 
+      [_AccumRg871].[_RecorderTRef] AS [_RecorderTRef], 
+      [_AccumRg871].[_RecorderRRef] AS [_RecorderRRef], 
+      [_AccumRg871].[_LineNo] AS [_LineNo], 
+      [_AccumRg871].[_Active] AS [_Active], 
+      [_AccumRg871].[_RecordKind] AS [_RecordKind], 
+      [_AccumRg871].[_Fld872RRef] AS [_Fld872RRef], 
+      [_AccumRg871].[_Fld873RRef] AS [_Fld873RRef], 
+      [_AccumRg871].[_Fld874RRef] AS [_Fld874RRef], 
+      [_AccumRg871].[_Fld875RRef] AS [_Fld875RRef], 
+      [_AccumRg871].[_Fld876] AS [_Fld876]
+      FROM [dbo].[_AccumRg871] AS [_AccumRg871]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Ошибки, обнаруженные при создании:
+      предупреждение 6002: В таблице или представлении "base_vetlab.dbo._AccumRg871" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.
+      -->
+        <EntityType Name="_AccumRg871">
+          <Key>
+            <PropertyRef Name="_Period" />
+            <PropertyRef Name="_RecorderTRef" />
+            <PropertyRef Name="_RecorderRRef" />
+            <PropertyRef Name="_LineNo" />
+            <PropertyRef Name="_Active" />
+            <PropertyRef Name="_RecordKind" />
+            <PropertyRef Name="_Fld872RRef" />
+            <PropertyRef Name="_Fld873RRef" />
+            <PropertyRef Name="_Fld874RRef" />
+            <PropertyRef Name="_Fld875RRef" />
+            <PropertyRef Name="_Fld876" />
+          </Key>
+          <Property Name="_Period" Type="datetime" Nullable="false" />
+          <Property Name="_RecorderTRef" Type="binary" Nullable="false" MaxLength="4" />
+          <Property Name="_RecorderRRef" Type="binary" Nullable="false" MaxLength="16" />
+          <Property Name="_LineNo" Type="numeric" Nullable="false" Precision="9" />
+          <Property Name="_Active" Type="binary" Nullable="false" MaxLength="1" />
+          <Property Name="_RecordKind" Type="numeric" Nullable="false" Precision="1" />
+          <Property Name="_Fld872RRef" Type="binary" Nullable="false" MaxLength="16" />
+          <Property Name="_Fld873RRef" Type="binary" Nullable="false" MaxLength="16" />
+          <Property Name="_Fld874RRef" Type="binary" Nullable="false" MaxLength="16" />
+          <Property Name="_Fld875RRef" Type="binary" Nullable="false" MaxLength="16" />
+          <Property Name="_Fld876" Type="numeric" Nullable="false" Precision="15" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="base_vetlabModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="base_vetlabEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="C_AccumRg871" EntityType="base_vetlabModel.C_AccumRg871" />
+        </EntityContainer>
+        <EntityType Name="C_AccumRg871">
+          <Key>
+            <PropertyRef Name="C_Period" />
+            <PropertyRef Name="C_RecorderTRef" />
+            <PropertyRef Name="C_RecorderRRef" />
+            <PropertyRef Name="C_LineNo" />
+            <PropertyRef Name="C_Active" />
+            <PropertyRef Name="C_RecordKind" />
+            <PropertyRef Name="C_Fld872RRef" />
+            <PropertyRef Name="C_Fld873RRef" />
+            <PropertyRef Name="C_Fld874RRef" />
+            <PropertyRef Name="C_Fld875RRef" />
+            <PropertyRef Name="C_Fld876" />
+          </Key>
+          <Property Name="C_Period" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="C_RecorderTRef" Type="Binary" Nullable="false" MaxLength="4" FixedLength="true" />
+          <Property Name="C_RecorderRRef" Type="Binary" Nullable="false" MaxLength="16" FixedLength="true" />
+          <Property Name="C_LineNo" Type="Decimal" Nullable="false" Precision="9" Scale="0" />
+          <Property Name="C_Active" Type="Binary" Nullable="false" MaxLength="1" FixedLength="true" />
+          <Property Name="C_RecordKind" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="C_Fld872RRef" Type="Binary" Nullable="false" MaxLength="16" FixedLength="true" />
+          <Property Name="C_Fld873RRef" Type="Binary" Nullable="false" MaxLength="16" FixedLength="true" />
+          <Property Name="C_Fld874RRef" Type="Binary" Nullable="false" MaxLength="16" FixedLength="true" />
+          <Property Name="C_Fld875RRef" Type="Binary" Nullable="false" MaxLength="16" FixedLength="true" />
+          <Property Name="C_Fld876" Type="Decimal" Nullable="false" Precision="15" Scale="0" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище base_vetlabModelContainer" CdmEntityContainer="base_vetlabEntities">
+          <EntitySetMapping Name="C_AccumRg871">
+            <EntityTypeMapping TypeName="base_vetlabModel.C_AccumRg871">
+              <MappingFragment StoreEntitySet="_AccumRg871">
+                <ScalarProperty Name="C_Period" ColumnName="_Period" />
+                <ScalarProperty Name="C_RecorderTRef" ColumnName="_RecorderTRef" />
+                <ScalarProperty Name="C_RecorderRRef" ColumnName="_RecorderRRef" />
+                <ScalarProperty Name="C_LineNo" ColumnName="_LineNo" />
+                <ScalarProperty Name="C_Active" ColumnName="_Active" />
+                <ScalarProperty Name="C_RecordKind" ColumnName="_RecordKind" />
+                <ScalarProperty Name="C_Fld872RRef" ColumnName="_Fld872RRef" />
+                <ScalarProperty Name="C_Fld873RRef" ColumnName="_Fld873RRef" />
+                <ScalarProperty Name="C_Fld874RRef" ColumnName="_Fld874RRef" />
+                <ScalarProperty Name="C_Fld875RRef" ColumnName="_Fld875RRef" />
+                <ScalarProperty Name="C_Fld876" ColumnName="_Fld876" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="По умолчанию" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

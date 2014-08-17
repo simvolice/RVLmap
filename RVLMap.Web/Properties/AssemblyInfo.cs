@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных с этой сборкой.
-[assembly: AssemblyTitle("MyPress.Web")]
+[assembly: AssemblyTitle("RVLMap.Web")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MyPress.Web")]
+[assembly: AssemblyProduct("RVLMap.Web")]
 [assembly: AssemblyCopyright("© , 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов typelib, если этот проект видим для COM
-[assembly: Guid("8c32523d-eb4b-4e7a-a8b8-459521ac0add")]
+[assembly: Guid("e7859983-87cd-472e-a92d-37980286b6a3")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //

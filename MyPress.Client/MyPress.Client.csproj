@@ -147,6 +147,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\AKT.xaml.cs">
@@ -172,9 +177,6 @@
     </Compile>
     <Compile Include="View\KYZ.xaml.cs">
       <DependentUpon>KYZ.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\MainPages.xaml.cs">
-      <DependentUpon>MainPages.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainUserControl.xaml.cs">
       <DependentUpon>MainUserControl.xaml</DependentUpon>
@@ -245,10 +247,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\MainPages.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\MainUserControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -312,9 +310,21 @@
       <All>True</All>
       <AutoFill>True</AutoFill>
     </BlendEmbeddedFont>
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference1\Service1.disco" />
     <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <Content Include="clientaccesspolicy.xml" />
+    <None Include="Service References\ServiceReference1\Service1.wsdl" />
+    <None Include="Service References\ServiceReference1\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ServiceReferences.ClientConfig" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx" />
@@ -337,6 +347,9 @@
   <ItemGroup>
     <Folder Include="Images\" />
     <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
