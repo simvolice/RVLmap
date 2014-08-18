@@ -1,6 +1,6 @@
 ﻿<UserControl
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" mc:Ignorable="d" x:Class="MyPress.Client.View.MapControl"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:local="clr-namespace:MyPress.Client.View" mc:Ignorable="d" x:Class="MyPress.Client.View.MapControl"
     >
 	<UserControl.Resources>
 
@@ -76,6 +76,9 @@
 									<SolidColorBrush Color="Black"/>
 								</ei:ChangePropertyAction.Value>
 							</ei:ChangePropertyAction>
+						</i:EventTrigger>
+						<i:EventTrigger EventName="MouseLeftButtonDown">
+							<ei:HyperlinkAction TargetWindow="_blank" NavigateUri="/TestPage.html#/AKT"/>
 						</i:EventTrigger>
 					</i:Interaction.Triggers>
 					

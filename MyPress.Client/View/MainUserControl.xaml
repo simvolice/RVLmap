@@ -62,7 +62,7 @@
         <Border x:Name="ContentBorder" >
 
             <navigation:Frame x:Name="ContentFrame" 
-				Source="/SplashScreen" RenderTransformOrigin="0.5,0.5" x:FieldModifier="public" JournalOwnership="OwnsJournal">
+				Source="/SplashScreen" RenderTransformOrigin="0.5,0.5" x:FieldModifier="public" JournalOwnership="UsesParentJournal">
                 <navigation:Frame.RenderTransform>
                     <CompositeTransform/>
                 </navigation:Frame.RenderTransform>

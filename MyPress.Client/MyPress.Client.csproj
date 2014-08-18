@@ -157,26 +157,50 @@
     <Compile Include="View\AKT.xaml.cs">
       <DependentUpon>AKT.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\AKTCTRL.xaml.cs">
+      <DependentUpon>AKTCTRL.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ALM.xaml.cs">
       <DependentUpon>ALM.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ALMCTRL.xaml.cs">
+      <DependentUpon>ALMCTRL.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Astana.xaml.cs">
       <DependentUpon>Astana.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\AstanaCNTRL.xaml.cs">
+      <DependentUpon>AstanaCNTRL.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ATY.xaml.cs">
       <DependentUpon>ATY.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ATYCNTRL.xaml.cs">
+      <DependentUpon>ATYCNTRL.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\JAM.xaml.cs">
       <DependentUpon>JAM.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\JAMCNTRL.xaml.cs">
+      <DependentUpon>JAMCNTRL.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\KAR.xaml.cs">
       <DependentUpon>KAR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KARCNTRL.xaml.cs">
+      <DependentUpon>KARCNTRL.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\KOS.xaml.cs">
       <DependentUpon>KOS.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\KOSCNTRL.xaml.cs">
+      <DependentUpon>KOSCNTRL.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\KYZ.xaml.cs">
       <DependentUpon>KYZ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KYZCNTRL.xaml.cs">
+      <DependentUpon>KYZCNTRL.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainUserControl.xaml.cs">
       <DependentUpon>MainUserControl.xaml</DependentUpon>
@@ -184,11 +208,20 @@
     <Compile Include="View\MAN.xaml.cs">
       <DependentUpon>MAN.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\MANCNTRL.xaml.cs">
+      <DependentUpon>MANCNTRL.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MapControl.xaml.cs">
       <DependentUpon>MapControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\PAV.xaml.cs">
       <DependentUpon>PAV.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PAVCNTRL.xaml.cs">
+      <DependentUpon>PAVCNTRL.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SCOCNTRL.xaml.cs">
+      <DependentUpon>SCOCNTRL.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\SKO.xaml.cs">
       <DependentUpon>SKO.xaml</DependentUpon>
@@ -199,11 +232,20 @@
     <Compile Include="View\VKO.xaml.cs">
       <DependentUpon>VKO.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\VKOCNTRL.xaml.cs">
+      <DependentUpon>VKOCNTRL.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\YKO.xaml.cs">
       <DependentUpon>YKO.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\YKOCNTRL.xaml.cs">
+      <DependentUpon>YKOCNTRL.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ZKO.xaml.cs">
       <DependentUpon>ZKO.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZKOCNTRL.xaml.cs">
+      <DependentUpon>ZKOCNTRL.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -219,7 +261,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\AKTCTRL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ALM.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ALMCTRL.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -227,7 +277,15 @@
       <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\AstanaCNTRL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ATY.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ATYCNTRL.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -235,7 +293,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\JAMCNTRL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\KAR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KARCNTRL.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -243,7 +309,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\KOSCNTRL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\KYZ.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KYZCNTRL.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -255,11 +329,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\MANCNTRL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MapControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\PAV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PAVCNTRL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SCOCNTRL.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -275,11 +361,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\VKOCNTRL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\YKO.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\YKOCNTRL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ZKO.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ZKOCNTRL.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
