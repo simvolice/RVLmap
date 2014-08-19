@@ -17,7 +17,7 @@
 
     <sdk:Page.Resources>
 
-        <view:MapControl x:Key="mapControl"/>
+       
         <Storyboard x:Name="MapInNormal">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="grid">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0">

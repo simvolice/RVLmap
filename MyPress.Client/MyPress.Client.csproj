@@ -154,20 +154,14 @@
     </Compile>
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Compile Include="View\AKT.xaml.cs">
-      <DependentUpon>AKT.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\AKTCTRL.xaml.cs">
       <DependentUpon>AKTCTRL.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\ALM.xaml.cs">
-      <DependentUpon>ALM.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ALMCTRL.xaml.cs">
       <DependentUpon>ALMCTRL.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Astana.xaml.cs">
-      <DependentUpon>Astana.xaml</DependentUpon>
+    <Compile Include="View\AST.xaml.cs">
+      <DependentUpon>AST.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\AstanaCNTRL.xaml.cs">
       <DependentUpon>AstanaCNTRL.xaml</DependentUpon>
@@ -247,6 +241,12 @@
     <Compile Include="View\ZKOCNTRL.xaml.cs">
       <DependentUpon>ZKOCNTRL.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\AKT.xaml.cs">
+      <DependentUpon>AKT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ALM.xaml.cs">
+      <DependentUpon>ALM.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -257,15 +257,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\AKT.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\AKTCTRL.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\ALM.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -273,7 +265,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Astana.xaml">
+    <Page Include="View\AST.xaml">
       <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -380,6 +372,14 @@
     <Page Include="View\ZKOCNTRL.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AKT.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ALM.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

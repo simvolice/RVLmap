@@ -62,7 +62,7 @@
         <Border x:Name="ContentBorder" >
 
             <navigation:Frame x:Name="ContentFrame" 
-				Source="/SplashScreen" RenderTransformOrigin="0.5,0.5" x:FieldModifier="public" JournalOwnership="UsesParentJournal">
+				Source="/AKT" RenderTransformOrigin="0.5,0.5" x:FieldModifier="public" JournalOwnership="UsesParentJournal">
                 <navigation:Frame.RenderTransform>
                     <CompositeTransform/>
                 </navigation:Frame.RenderTransform>
@@ -76,7 +76,7 @@
                 </i:Interaction.Triggers>
                 <navigation:Frame.UriMapper>
                     <uriMapper:UriMapper>
-                        <uriMapper:UriMapping Uri="" MappedUri="/View/SplashScreen.xaml"/>
+                        <uriMapper:UriMapping Uri="" MappedUri="/View/AKT.xaml"/>
                         <uriMapper:UriMapping Uri="/{pageName}" MappedUri="/View/{pageName}.xaml"/>
                     </uriMapper:UriMapper>
                 </navigation:Frame.UriMapper>

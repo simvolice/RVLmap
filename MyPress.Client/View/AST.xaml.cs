@@ -13,9 +13,9 @@ using System.Windows.Navigation;
 
 namespace MyPress.Client
 {
-    public partial class Astana : Page
+    public partial class AST : Page
     {
-        public Astana()
+        public AST()
         {
             InitializeComponent();
         }

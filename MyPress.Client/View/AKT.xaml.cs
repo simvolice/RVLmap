@@ -20,10 +20,10 @@ namespace MyPress.Client.View
             InitializeComponent();
         }
 
-        // Выполняется, когда пользователь переходит на эту страницу.
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-        }
+		
+		
+		
+     
 
     }
 }

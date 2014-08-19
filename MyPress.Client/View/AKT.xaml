@@ -1,34 +1,34 @@
-﻿<navigation:Page x:Class="MyPress.Client.View.AKT" 
+﻿<sdk:Page 
            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-           mc:Ignorable="d"
            xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
-           xmlns:view="clr-namespace:MyPress.Client.View"
-           xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-           xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
            xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:view="clr-namespace:MyPress.Client.View"
+           xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+           xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" 
+           xmlns:System="clr-namespace:System;assembly=mscorlib"
+           x:Class="MyPress.Client.View.AKT" 
+           mc:Ignorable="d"
            d:DesignWidth="640" d:DesignHeight="480"
-           Title="AKT Page">
+           Title="SplashScreen Page">
 
 
+    <sdk:Page.Resources>
 
-
-    <navigation:Page.Resources>
-
-
+       
         <Storyboard x:Name="MapInNormal">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="grid">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <BackEase EasingMode="EaseIn"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
+                		<BackEase EasingMode="EaseIn"/>
+                	</EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-46">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <BackEase EasingMode="EaseInOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
+                		<BackEase EasingMode="EaseInOut"/>
+                	</EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
@@ -39,8 +39,14 @@
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
 
-    </navigation:Page.Resources>
+    </sdk:Page.Resources>
 
+
+
+
+    <sdk:Page.DataContext>
+        <Binding Path="Main" Source="{StaticResource Locator}"/>
+    </sdk:Page.DataContext>
 
 
 
@@ -48,7 +54,7 @@
     <Grid x:Name="LayoutRoot" Background="#FF393E41">
 
 
-        <Grid x:Name="grid" Margin="11,97,9,10" Background="#FF8A8C8D" HorizontalAlignment="Center" VerticalAlignment="Center" Height="373">
+        <Grid x:Name="grid" Margin="11,79,9,10" Background="#FF8A8C8D" HorizontalAlignment="Center" VerticalAlignment="Center">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseLeftButtonDown">
                     <ei:ControlStoryboardAction Storyboard="{StaticResource MapInNormal}"/>
@@ -57,9 +63,9 @@
             <Grid.Projection>
                 <PlaneProjection/>
             </Grid.Projection>
-            <Viewbox Stretch="Uniform" Width="620" Height="373">
+            <Viewbox Stretch="Uniform">
 
-                <view:AKTCTRL Height="608" Width="1531">
+                <view:AKTCTRL Height="182">
                     <view:AKTCTRL.Effect>
                         <DropShadowEffect/>
                     </view:AKTCTRL.Effect>
@@ -109,8 +115,4 @@
         </Border>
 
     </Grid>
-
-
-
-
-</navigation:Page>
+</sdk:Page>

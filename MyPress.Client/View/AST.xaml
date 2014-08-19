@@ -7,7 +7,7 @@
 	xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
 	xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
 	xmlns:view="clr-namespace:MyPress.Client.View"
-	x:Class= "MyPress.Client.Astana" 
+	x:Class= "MyPress.Client.AST" 
 	Title="Astana Page"
 	d:DesignWidth="640" d:DesignHeight="480">
 
