@@ -1,13 +1,118 @@
 ﻿<navigation:Page x:Class="MyPress.Client.View.YKO" 
-           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-           mc:Ignorable="d"
            xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:view="clr-namespace:MyPress.Client.View"
+           xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+           xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" 
+           xmlns:System="clr-namespace:System;assembly=mscorlib"
+          
+           mc:Ignorable="d"
            d:DesignWidth="640" d:DesignHeight="480"
-           Title="YKO Page">
-    <Grid x:Name="LayoutRoot">
-       
+           Title="SplashScreen Page">
+
+
+    <sdk:Page.Resources>
+
+
+        <Storyboard x:Name="MapInNormal">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="grid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseIn"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-46">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="Storyboard1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(RangeBase.Value)" Storyboard.TargetName="progressBar">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="100"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+    </sdk:Page.Resources>
+
+
+
+
+    <sdk:Page.DataContext>
+        <Binding Path="Main" Source="{StaticResource Locator}"/>
+    </sdk:Page.DataContext>
+
+
+
+
+    <Grid x:Name="LayoutRoot" Background="#FF393E41">
+
+
+        <Grid x:Name="grid" Margin="10,88,10,10" Background="#FF8A8C8D" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseLeftButtonDown">
+                    <ei:ControlStoryboardAction Storyboard="{StaticResource MapInNormal}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Grid.Projection>
+                <PlaneProjection/>
+            </Grid.Projection>
+            <Viewbox Stretch="Uniform" Margin="141,67,291,73">
+
+                <view:YKOCNTRL Height="202" Width="154">
+                    <view:YKOCNTRL.Effect>
+                        <DropShadowEffect/>
+                    </view:YKOCNTRL.Effect>
+                </view:YKOCNTRL>
+
+            </Viewbox>
+
+
+
+        </Grid>
+
+
+
+
+
+        <sdk:Label HorizontalAlignment="Left" Height="90" Margin="27,-7,0,0" VerticalAlignment="Top" Width="302" Foreground="#FFE6E24D" FontSize="72" FontFamily="/MyPress.Client;component/Fonts/Fonts.zip#Segoe UI Light" Content="{Binding Resource1.Vetlab, Source={StaticResource StResource1}}"/>
+        <sdk:Label Margin="-7.684,28.749,0,0" Width="64.97" Foreground="#FFE6E24D" FontSize="17.333" Content="{Binding Resource1.Map, Source={StaticResource StResource1}}" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" FontFamily="/MyPress.Client;component/Fonts/Fonts.zip#Segoe UI" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <sdk:Label.RenderTransform>
+                <CompositeTransform Rotation="-90.617"/>
+            </sdk:Label.RenderTransform>
+        </sdk:Label>
+        <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="ПОМОЩЬ" VerticalAlignment="Top" Margin="0,53,10,0" FontSize="16" FontFamily="Segoe UI Light" Width="84" TextOptions.TextHintingMode="Animated" Foreground="#FFE6E24D" FontWeight="Black"/>
+        <Path Data="M0,83 L640,83" Fill="#FFE6E24D" Height="1" Margin="0,73,-1,0" Stretch="Fill" Stroke="#FFE6E24D" UseLayoutRounding="False" VerticalAlignment="Top" StrokeThickness="10"/>
+        <ProgressBar x:Name="progressBar" Height="7" VerticalAlignment="Top" Style="{StaticResource ProgressBarUp}" Value="4">
+            <i:Interaction.Triggers>
+                <i:EventTrigger>
+                    <ei:ControlStoryboardAction Storyboard="{StaticResource Storyboard1}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </ProgressBar>
+        <Border x:Name="legend" Height="119" VerticalAlignment="Top" Margin="27,97,0,0" HorizontalAlignment="Left" Width="88" CornerRadius="10,0,10,0" Background="#FF4B4D4D" BorderThickness="1" AllowDrop="True" Cursor="Hand">
+            <i:Interaction.Behaviors>
+                <ei:MouseDragElementBehavior ConstrainToParentBounds="True"/>
+            </i:Interaction.Behaviors>
+            <Grid Margin="-1,-1,0,0">
+                <Border BorderBrush="Black" HorizontalAlignment="Left" Height="11" VerticalAlignment="Top" Width="13" Margin="6,8,0,0" Background="Red"/>
+                <Border BorderBrush="Black" HorizontalAlignment="Left" Height="11" VerticalAlignment="Top" Width="13" Margin="6,34,0,0" Background="#FFF3FF00"/>
+                <Border BorderBrush="Black" HorizontalAlignment="Left" Height="11" VerticalAlignment="Top" Width="13" Margin="6,55,0,0" Background="#FFEC8D04"/>
+                <Border BorderBrush="Black" HorizontalAlignment="Left" Height="11" VerticalAlignment="Top" Width="13" Margin="6,77,0,0" Background="#FF00FF2E"/>
+                <Border BorderBrush="Black" HorizontalAlignment="Left" Height="11" VerticalAlignment="Top" Width="13" Margin="6,97,0,0" Background="#FF116815"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Resource1.Kritich, Mode=OneWay, Source={StaticResource StResource1}}" VerticalAlignment="Top" Margin="21,7,0,0" Foreground="#FFE6E24D" Height="15" Width="70"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Resource1.Otlich, Mode=OneWay, Source={StaticResource StResource1}}" VerticalAlignment="Top" Margin="22,96,0,0" Foreground="#FFE6E24D" Height="13" Width="60"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Resource1.Bad, Mode=OneWay, Source={StaticResource StResource1}}" VerticalAlignment="Top" Margin="21,33,0,0" Foreground="#FFE6E24D" Height="13" Width="47"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Resource1.Srednee, Mode=OneWay, Source={StaticResource StResource1}}" VerticalAlignment="Top" Margin="21,54,0,0" Foreground="#FFE6E24D" Height="15" Width="53"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Resource1.Good, Mode=OneWay, Source={StaticResource StResource1}}" VerticalAlignment="Top" Margin="22,76,0,0" Foreground="#FFE6E24D" Height="15" Width="58"/>
+            </Grid>
+        </Border>
+
     </Grid>
 </navigation:Page>
