@@ -166,9 +166,6 @@
     <Compile Include="View\AstanaCNTRL.xaml.cs">
       <DependentUpon>AstanaCNTRL.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ATY.xaml.cs">
-      <DependentUpon>ATY.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\ATYCNTRL.xaml.cs">
       <DependentUpon>ATYCNTRL.xaml</DependentUpon>
     </Compile>
@@ -247,6 +244,9 @@
     <Compile Include="View\ALM.xaml.cs">
       <DependentUpon>ALM.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ATY.xaml.cs">
+      <DependentUpon>ATY.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -270,10 +270,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\AstanaCNTRL.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\ATY.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -378,6 +374,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\ALM.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ATY.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

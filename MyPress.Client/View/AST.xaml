@@ -42,6 +42,9 @@
 
 
 
+    <sdk:Page.DataContext>
+        <Binding Path="Main" Source="{StaticResource Locator}"/>
+    </sdk:Page.DataContext>
 
 
     <Grid x:Name="LayoutRoot" Background="#FF393E41">

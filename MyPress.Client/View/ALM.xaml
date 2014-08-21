@@ -17,18 +17,18 @@
 
     <sdk:Page.Resources>
 
-       
+
         <Storyboard x:Name="MapInNormal">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="grid">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                		<BackEase EasingMode="EaseIn"/>
-                	</EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseIn"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-46">
                     <EasingDoubleKeyFrame.EasingFunction>
-                		<BackEase EasingMode="EaseInOut"/>
-                	</EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
@@ -65,11 +65,11 @@
             </Grid.Projection>
             <Viewbox Stretch="Uniform">
 
-                <view:ALM Height="182">
-                    <view:ALM.Effect>
+                <view:ALMCTRL Height="182">
+                    <view:ALMCTRL.Effect>
                         <DropShadowEffect/>
-                    </view:ALM.Effect>
-                </view:ALM>
+                    </view:ALMCTRL.Effect>
+                </view:ALMCTRL>
 
             </Viewbox>
 
