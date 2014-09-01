@@ -19,7 +19,7 @@ namespace MyPress.Client
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            RootVisual = new MainUserControl();
+           RootVisual = new MainUserControl();
             
             
             

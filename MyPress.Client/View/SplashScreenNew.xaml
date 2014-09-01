@@ -1,0 +1,24 @@
+﻿<navigation:Page 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="MyPress.Client.View.SplashScreenNew"
+           mc:Ignorable="d"
+           d:DesignWidth="640" d:DesignHeight="480"
+           Title="SplashScreenNew Page">
+	<Grid x:Name="LayoutRoot" Background="#FF393E41">
+
+
+
+
+
+		<sdk:Label HorizontalAlignment="Center" Height="90" Margin="176,116,162,274" VerticalAlignment="Center" Width="302" Foreground="#FFE6E24D" FontSize="72" FontFamily="/MyPress.Client;component/Fonts/Fonts.zip#Segoe UI Light" Content="{Binding Resource1.Vetlab, Source={StaticResource StResource1}}"/>
+		<sdk:Label Margin="170.667,157.613,404.363,299.333" Width="64.97" Foreground="#FFE6E24D" FontSize="17.333" Content="{Binding Resource1.Map, Source={StaticResource StResource1}}" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" FontFamily="/MyPress.Client;component/Fonts/Fonts.zip#Segoe UI" VerticalAlignment="Center" HorizontalAlignment="Center">
+			<sdk:Label.RenderTransform>
+				<CompositeTransform Rotation="-90.617"/>
+			</sdk:Label.RenderTransform>
+		</sdk:Label>
+	</Grid>
+</navigation:Page>

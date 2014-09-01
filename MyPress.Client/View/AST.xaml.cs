@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 using System.Windows.Navigation;
-using MyPress.Client.TestVetlab;
+
 
 namespace MyPress.Client.View
 {
