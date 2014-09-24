@@ -14,5 +14,10 @@ namespace MyPress.Client.Model
     public class DataDemo
     {
 
+		
+		public string State {get; set;}
+		
+		public int Number {get; set;}
+		
     }
 }
