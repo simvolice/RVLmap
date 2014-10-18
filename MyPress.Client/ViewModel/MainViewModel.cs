@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
@@ -12,45 +12,52 @@ namespace MyPress.Client.ViewModel
 {
 
 
+public class TestClass
+    {
+        public string Category { get; set; }
 
+        public int Number  { get; set; }
+
+    public string Name { get; set; }
+
+
+
+    }
     public class MainViewModel : ViewModelBase
 
     {
 
        
 
+private object selectedItem = null;
+        public object SelectedItem
+        {
+            get
+            {
+                return selectedItem;
+            }
+            set
+            {
+                // selected item has changed
+                selectedItem = value;                
+            }
+        }
 
 
-
-        private readonly IDataService _dataService;
-
+       
+public ObservableCollection<TestClass> Errors { get; private set; }
 
       
-        public MainViewModel(IDataService dataService)
+        public MainViewModel()
         {
-            _dataService = dataService;
-            _dataService.GetData(
-                (item, error) =>
-                {
-                    if (error != null)
-                    {
-                        
+            
 
-                      throw new Exception(error.Message);
-
-
-                    }
-
-
-                
-
-
-        
-
-
-                });
-
-
+Errors = new ObservableCollection<TestClass>();
+            Errors.Add(new TestClass() { Category = "Globalization", Number = 75 });
+            Errors.Add(new TestClass() { Category = "Features", Number = 2 });
+            Errors.Add(new TestClass() { Category = "ContentTypes", Number = 12 });
+            Errors.Add(new TestClass() { Category = "Correctness", Number = 83});
+            Errors.Add(new TestClass() { Category = "Best Practices", Number = 29 });
         
         
         
