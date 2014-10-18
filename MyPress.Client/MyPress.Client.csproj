@@ -60,7 +60,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="De.TorstenMandelkow.MetroChart">
-      <HintPath>D:\SourceAndTestApplications %281%29\MetroChart\De.TorstenMandelkow.MetroChart.SL\Bin\Debug\De.TorstenMandelkow.MetroChart.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\SourceAndTestApplications\MetroChart\De.TorstenMandelkow.MetroChart.SL\Bin\Debug\De.TorstenMandelkow.MetroChart.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight.Extras.SL5">
       <HintPath>..\packages\MvvmLightLibs.4.2.30.0\lib\SL5\GalaSoft.MvvmLight.Extras.SL5.dll</HintPath>

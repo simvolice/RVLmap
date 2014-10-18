@@ -52,7 +52,7 @@
 
         <Grid x:Name="grid" Margin="11,79,9,10" Background="#FF8A8C8D" HorizontalAlignment="Center" VerticalAlignment="Center">
             <i:Interaction.Triggers>
-                <i:EventTrigger EventName="MouseLeftButtonDown">
+                <i:EventTrigger>
                     <ei:ControlStoryboardAction Storyboard="{StaticResource MapInNormal}"/>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
@@ -92,7 +92,7 @@
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </ProgressBar>
-        <Border x:Name="legend" Height="119" VerticalAlignment="Top" Margin="27,97,0,0" HorizontalAlignment="Left" Width="88" CornerRadius="10,0,10,0" Background="#FF4B4D4D" BorderThickness="1" AllowDrop="True" Cursor="Hand">
+        <Border x:Name="legend" Height="119" VerticalAlignment="Top" Margin="27,97,0,0" HorizontalAlignment="Left" Width="88" Background="#FF4B4D4D" BorderThickness="1" AllowDrop="True" Cursor="Hand">
             <i:Interaction.Behaviors>
                 <ei:MouseDragElementBehavior ConstrainToParentBounds="True"/>
             </i:Interaction.Behaviors>

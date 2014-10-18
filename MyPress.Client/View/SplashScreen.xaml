@@ -103,7 +103,7 @@
 				</i:EventTrigger>
 			</i:Interaction.Triggers>
 		</ProgressBar>
-		<Border x:Name="legend" Height="119" VerticalAlignment="Top" Margin="530,91,0,0" HorizontalAlignment="Left" Width="88" CornerRadius="10,0,10,0" Background="#FF4B4D4D" BorderThickness="1" AllowDrop="True" Cursor="Hand">
+		<Border x:Name="legend" Height="119" VerticalAlignment="Top" Margin="530,91,0,0" HorizontalAlignment="Left" Width="88" Background="#FF4B4D4D" BorderThickness="1" AllowDrop="True" Cursor="Hand">
 			<i:Interaction.Behaviors>
 				<ei:MouseDragElementBehavior ConstrainToParentBounds="True"/>
 			</i:Interaction.Behaviors>
