@@ -86,21 +86,9 @@
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
-    <Compile Include="Vetlab.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Vetlab.edmx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Vetlab.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Vetlab.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <Content Include="packages.config" />
-    <Content Include="Vetlab.edmx.diagram">
-      <DependentUpon>Vetlab.edmx</DependentUpon>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

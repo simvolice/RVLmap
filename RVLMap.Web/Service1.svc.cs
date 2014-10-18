@@ -17,7 +17,7 @@ namespace RVLMap.Web
 
 
 
-        base_vetlabEntities cd = new base_vetlabEntities();
+       
 
 
         public void DoWork()
