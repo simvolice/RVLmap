@@ -53,11 +53,9 @@ public ObservableCollection<TestClass> Errors { get; private set; }
             
 
 Errors = new ObservableCollection<TestClass>();
-            Errors.Add(new TestClass() { Category = "Globalization", Number = 75 });
-            Errors.Add(new TestClass() { Category = "Features", Number = 2 });
-            Errors.Add(new TestClass() { Category = "ContentTypes", Number = 12 });
-            Errors.Add(new TestClass() { Category = "Correctness", Number = 83});
-            Errors.Add(new TestClass() { Category = "Best Practices", Number = 29 });
+            Errors.Add(new TestClass() { Category = "Область", Number = 50 });
+            Errors.Add(new TestClass() { Category = "Район", Number = 50 });
+          
         
         
         

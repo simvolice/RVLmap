@@ -120,6 +120,9 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
+	<Style x:Key="ToolTipPopUp" TargetType="Popup">
+		<Setter Property="OpacityMask" Value="{x:Null}"/>
+	</Style>
 
     
 </ResourceDictionary>

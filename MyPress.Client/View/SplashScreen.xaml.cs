@@ -20,7 +20,8 @@ namespace MyPress.Client.View
             InitializeComponent();
         }
 
-		
+     
+
 		
 		
      
